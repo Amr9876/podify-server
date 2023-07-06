@@ -92,7 +92,7 @@ export const sendReVerificationEmail: RequestHandler = async (req, res) => {
     token,
   });
 
-  sendVerificationMail(token, {
+  await sendVerificationMail(token, {
     name: user.name,
     email: user.email,
   });
@@ -124,7 +124,7 @@ export const generateForgetPasswordLink: RequestHandler = async (req, res) => {
     window.location.origin +
     `${PASSWORD_RESET_LINK}?token=${token}&userId=${user._id.toString()}`;
 
-  sendForgetPasswordLink({ email, link: resetLink });
+  await sendForgetPasswordLink({ email, link: resetLink });
 
   res.json({ message: "Check your mail box" });
 };
@@ -150,7 +150,7 @@ export const updatePassword: RequestHandler = async (req, res) => {
 
   await PasswordResetToken.findOneAndDelete({ owner: user._id.toString() });
 
-  sendPassResetSuccessEmail(user.name, user.email);
+  await sendPassResetSuccessEmail(user.name, user.email);
 
   res.json({ message: "Password resets successfully." });
 };
