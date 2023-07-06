@@ -1,0 +1,40 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsnd --respawn -r tsconfig-paths/register --pretty --transpile-only ./src/index.ts",
+    "build": "tsc && tsc-alias"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/formidable": "^2.0.6",
+    "@types/nodemailer": "^6.4.8",
+    "bcrypt": "^5.1.0",
+    "cloudinary": "^1.37.0",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "formidable": "^2.1.1",
+    "jsonwebtoken": "^9.0.0",
+    "moment": "^2.29.4",
+    "mongoose": "^7.2.2",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.3",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.2.5",
+    "@types/node-cron": "^3.0.7",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.3"
+  }
+}
