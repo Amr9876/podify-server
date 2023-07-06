@@ -27,4 +27,8 @@ app.use("/history", historyRouter);
 
 app.use(errorHandler);
 
+app.get("/", (req, res) => res.json({ alive: true }));
+
+app.get("*", (req, res) => res.status(404).json({ error: "Not Found" }));
+
 app.listen(PORT, () => console.log(`🚀 Server has started on port ${PORT}`));
