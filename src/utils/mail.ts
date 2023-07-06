@@ -44,12 +44,12 @@ export const sendVerificationMail = async (token: string, profile: Profile) => {
     attachments: [
       {
         filename: "logo.png",
-        path: path.join(__dirname, "../mail/logo.png"),
+        path: "https://mailtrap.io/api/accounts/1596809/inboxes/2259660/messages/3522530738/attachments/part/logo?api_token=05c970b332f824fa0c0a8d25faba8032",
         cid: "logo",
       },
       {
         filename: "welcome.png",
-        path: path.join(__dirname, "../mail/welcome.png"),
+        path: "https://mailtrap.io/api/accounts/1596809/inboxes/2259660/messages/3522530738/attachments/part/welcome?api_token=05c970b332f824fa0c0a8d25faba8032",
         cid: "welcome",
       },
     ],
@@ -84,12 +84,12 @@ export const sendForgetPasswordLink = async (options: Options) => {
     attachments: [
       {
         filename: "logo.png",
-        path: path.join(__dirname, "../mail/logo.png"),
+        path: "https://mailtrap.io/api/accounts/1596809/inboxes/2259660/messages/3510741212/attachments/part/logo?api_token=05c970b332f824fa0c0a8d25faba8032",
         cid: "logo",
       },
       {
         filename: "forget_password.png",
-        path: path.join(__dirname, "../mail/forget_password.png"),
+        path: "https://mailtrap.io/api/accounts/1596809/inboxes/2259660/messages/3510748104/attachments/part/forget_password?api_token=05c970b332f824fa0c0a8d25faba8032",
         cid: "forget_password",
       },
     ],
@@ -119,12 +119,12 @@ export const sendPassResetSuccessEmail = async (
     attachments: [
       {
         filename: "logo.png",
-        path: path.join(__dirname, "../mail/logo.png"),
+        path: "https://mailtrap.io/api/accounts/1596809/inboxes/2259660/messages/3510741212/attachments/part/logo?api_token=05c970b332f824fa0c0a8d25faba8032",
         cid: "logo",
       },
       {
         filename: "forget_password.png",
-        path: path.join(__dirname, "../mail/forget_password.png"),
+        path: "https://mailtrap.io/api/accounts/1596809/inboxes/2259660/messages/3510748104/attachments/part/forget_password?api_token=05c970b332f824fa0c0a8d25faba8032",
         cid: "forget_password",
       },
     ],
