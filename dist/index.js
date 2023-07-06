@@ -27,4 +27,6 @@ app.use("/playlist", playlistRouter_1.default);
 app.use("/profile", profileRouter_1.default);
 app.use("/history", historyRouter_1.default);
 app.use(errorMiddleware_1.errorHandler);
+app.get("/", (req, res) => res.json({ alive: true }));
+app.get("*", (req, res) => res.status(404).json({ error: "Not Found" }));
 app.listen(PORT, () => console.log(`🚀 Server has started on port ${PORT}`));
